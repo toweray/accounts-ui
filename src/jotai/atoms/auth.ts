@@ -13,4 +13,8 @@ export const tokenAtom = atomWithStorage<string | null>(
 
 export const userAtom = atom<User | null>(null) as PrimitiveAtom<User | null>
 
+export const authErrorAtom = atom<string | null>(null) as PrimitiveAtom<
+  string | null
+>
+
 export const isAuthenticatedAtom = atom(get => get(userAtom) !== null)

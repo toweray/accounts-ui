@@ -1,11 +1,10 @@
-import { ThemeToggle } from '@/components/theme-toggle'
-import { Button } from '@/components/ui/button'
+import { useAuth } from '@/hooks/use-auth'
 
 export const HomePage = () => {
+  const { user } = useAuth()
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button>Click me</Button>
-      <ThemeToggle />
+    <div>
+      <h1>Hello, {user.username}</h1>
     </div>
   )
 }
