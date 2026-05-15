@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Outlet, ScrollRestoration } from 'react-router-dom'
 import { useAuth } from '@/hooks/use-auth'
+import { AuthRedirector } from './auth-redirector'
 import { Spinner } from './ui/spinner'
 
 const Preloader = () => (
@@ -21,7 +22,9 @@ export const Root = () => {
 
   return (
     <>
-      <Outlet />
+      <AuthRedirector>
+        <Outlet />
+      </AuthRedirector>
       <ScrollRestoration />
     </>
   )
