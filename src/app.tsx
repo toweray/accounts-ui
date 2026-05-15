@@ -1,5 +1,11 @@
+import { Toaster } from 'sonner'
 import { AppRouter } from './router'
 
 export const App = () => {
-  return <AppRouter />
+  return (
+    <>
+      <AppRouter />
+      <Toaster position="top-right" richColors />
+    </>
+  )
 }

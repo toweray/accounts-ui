@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "https://accountsapi.toweray.com/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/"
     }
