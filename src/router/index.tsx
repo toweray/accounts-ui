@@ -4,10 +4,15 @@ import {
   Route,
   RouterProvider
 } from 'react-router-dom'
+import { InnerPage } from '@/components/layout/inner-page'
 import { HomePage } from '@/pages/home'
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" Component={HomePage} />)
+  createRoutesFromElements(
+    <Route path="/" Component={InnerPage}>
+      <Route index Component={HomePage} />
+    </Route>
+  )
 )
 
 export const AppRouter = () => <RouterProvider router={router} />
