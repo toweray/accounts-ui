@@ -1,10 +1,11 @@
-import { useAuth } from '@/hooks/use-auth'
+import { AccountCard } from './components/account-card'
 
 export const HomePage = () => {
-  const { user } = useAuth()
   return (
-    <div>
-      <h1>Hello, {user.username}</h1>
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div className="flex min-w-0 flex-col gap-4">
+        <AccountCard />
+      </div>
     </div>
   )
 }

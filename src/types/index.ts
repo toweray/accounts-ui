@@ -13,3 +13,8 @@ export interface User {
   balance: number
   registered_at: string
 }
+
+export interface OAuthClient {
+  id: string
+  name: string
+}
